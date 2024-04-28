@@ -47,3 +47,17 @@ string[] CreatingArrayStringsLessThan3(string[] workArray)
     return result;
 }
 
+string PrintArray(string[] workArray)
+{
+    string arString = "[";
+    for (int i = 0; i < workArray.Length; i++)
+    {
+        arString += $"\"{workArray[i]}\"";
+        if (i < workArray.Length - 1)
+        {
+            arString += ", ";
+        }
+    }
+    arString += "]";
+    return arString;
+}

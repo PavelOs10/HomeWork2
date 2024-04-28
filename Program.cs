@@ -61,3 +61,9 @@ string PrintArray(string[] workArray)
     arString += "]";
     return arString;
 }
+
+string[] workArray = EnterStringsToArray();
+string[] result = CreatingArrayStringsLessThan3(workArray);
+string firstArray = PrintArray(workArray);
+string secondArray = PrintArray(result);
+Console.WriteLine(firstArray + " -> " + secondArray);

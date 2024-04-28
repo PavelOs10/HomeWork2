@@ -7,7 +7,6 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-
 string[] EnterStringsToArray()
 {
     Console.WriteLine("Введите количество строк: ");
@@ -23,3 +22,28 @@ string[] EnterStringsToArray()
 
     return workArray;
 }
+
+string[] CreatingArrayStringsLessThan3(string[] workArray)
+{
+    int count = 0;
+    foreach (string item in workArray)
+    {
+        if (item.Length <= 3)
+        {
+            count++;
+        }
+    }
+    string[] result = new string[count];
+    int i = 0;
+    foreach (string item in workArray)
+    {
+        if (item.Length <= 3)
+        {
+            result[i] = item;
+            i++;
+        }
+    }
+
+    return result;
+}
+
